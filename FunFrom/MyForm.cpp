@@ -11,22 +11,22 @@ int main()
 
 void MyForm::txt_LostFocus(System::Object^  sender, System::EventArgs^  e)
 {
-	this->textBox1->Enabled = true;
+	this->textBox_RGB->Enabled = true;
 }
 
 void MyForm::txt_GotFocus(System::Object^  sender, System::EventArgs^  e)
 {
-	this->textBox1->Enabled = false;
+	this->textBox_RGB->Enabled = false;
 }
 
 Void MyForm::textBox1_MouseEnter(System::Object^  sender, System::EventArgs^  e)
 {
-	this->textBox1->Enabled = false;
+	this->textBox_RGB->Enabled = false;
 }
 
 Void MyForm::textBox1_MouseLeave(System::Object^  sender, System::EventArgs^  e)
 {
-	this->textBox1->Enabled = true;
+	this->textBox_RGB->Enabled = true;
 }
 
 Void MyForm::button1_MouseEnter(System::Object^  sender, System::EventArgs^  e)
@@ -39,15 +39,16 @@ Void MyForm::button1_MouseEnter(System::Object^  sender, System::EventArgs^  e)
 	this->button1->Location = System::Drawing::Point(demo1, demo2);
 }
 
-Void MyForm::pictureBox1_Click(System::Object^  sender, System::EventArgs^  e)
+Void MyForm::pictureBox_pic_Click(System::Object^  sender, System::EventArgs^  e)
 {
 
 	// Create a Bitmap object from an image file.
-	Bitmap^ myBitmap = gcnew Bitmap(this->pictureBox1->Image);
+	Bitmap^ myBitmap = gcnew Bitmap(this->pictureBox_pic->Image);
 
 	// Get the color of a pixel within myBitmap.
 	Color pixelColor = myBitmap->GetPixel((int)xReally, (int)yReally);
-
+	pictureBox_color->BackColor = pixelColor;
+	textBox_RGB->Text = pixelColor.ToString();
 	MessageBox::Show(pixelColor.ToString());
 }
 
@@ -60,17 +61,17 @@ Void MyForm::button2_Click(System::Object^  sender, System::EventArgs^  e)
 	openFileDialog1->RestoreDirectory = true;
 
 	if (openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
-		this->textBox2->Text = openFileDialog1->FileName;
-		this->pictureBox1->Image = Image::FromFile(this->textBox2->Text);
+		this->textBoxPicFile->Text = openFileDialog1->FileName;
+		this->pictureBox_pic->Image = Image::FromFile(this->textBoxPicFile->Text);
 	}
 }
 
 Void MyForm::pictureBox1_MouseDown(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e)
 {
-		float imgWidth = (float)this->pictureBox1->Image->Width;
-		float imgHeight = (float)this->pictureBox1->Image->Height;
-		float pictureBoxWidth = (float)this->pictureBox1->Width;
-		float pictureBoxHeight = (float)this->pictureBox1->Height;
+		float imgWidth = (float)this->pictureBox_pic->Image->Width;
+		float imgHeight = (float)this->pictureBox_pic->Image->Height;
+		float pictureBoxWidth = (float)this->pictureBox_pic->Width;
+		float pictureBoxHeight = (float)this->pictureBox_pic->Height;
 
 		xReally = (float)e->X * imgWidth / pictureBoxWidth;
 		yReally = (float)e->Y * imgHeight / pictureBoxHeight;
