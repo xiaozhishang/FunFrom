@@ -48,7 +48,7 @@ Void MyForm::pictureBox_pic_Click(System::Object^  sender, System::EventArgs^  e
 	Color pixelColor = myBitmap->GetPixel((int)xReally, (int)yReally);
 	pictureBox_color->BackColor = pixelColor;
 	textBox_RGB->Text = pixelColor.ToString();
-	MessageBox::Show(pixelColor.ToString());
+	//MessageBox::Show(pixelColor.ToString());
 }
 
 Void MyForm::selectPicButton_Click(System::Object^  sender, System::EventArgs^  e)

@@ -37,7 +37,6 @@ namespace FunFrom {
 	private: System::Windows::Forms::PictureBox^  pictureBox_pic;
 	private: System::Windows::Forms::TextBox^  textBoxPicFile;
 	private: System::Windows::Forms::Button^  selectPicButton;
-
 	private:
 		/// <summary>
 		/// 必需的设计器变量。
@@ -72,32 +71,32 @@ namespace FunFrom {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox_color))->BeginInit();
 			this->SuspendLayout();
 			// 
-			// textBox1
+			// textBox_RGB
 			// 
 			this->textBox_RGB->Location = System::Drawing::Point(223, 96);
-			this->textBox_RGB->Name = L"textBox1";
+			this->textBox_RGB->Name = L"textBox_RGB";
 			this->textBox_RGB->Size = System::Drawing::Size(394, 25);
 			this->textBox_RGB->TabIndex = 0;
 			this->textBox_RGB->MouseEnter += gcnew System::EventHandler(this, &MyForm::textBox1_MouseEnter);
 			this->textBox_RGB->MouseLeave += gcnew System::EventHandler(this, &MyForm::textBox1_MouseLeave);
 			// 
-			// button1
+			// funButton
 			// 
 			this->funButton->Font = (gcnew System::Drawing::Font(L"宋体", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
 			this->funButton->Location = System::Drawing::Point(655, 93);
-			this->funButton->Name = L"button1";
+			this->funButton->Name = L"funButton";
 			this->funButton->Size = System::Drawing::Size(133, 36);
 			this->funButton->TabIndex = 1;
 			this->funButton->Text = L"点到我算我输";
 			this->funButton->UseVisualStyleBackColor = true;
 			this->funButton->MouseEnter += gcnew System::EventHandler(this, &MyForm::funButton_MouseEnter);
 			// 
-			// pictureBox1
+			// pictureBox_pic
 			// 
-			this->pictureBox_pic->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox_pic->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox_pic.Image")));
 			this->pictureBox_pic->Location = System::Drawing::Point(99, 137);
-			this->pictureBox_pic->Name = L"pictureBox1";
+			this->pictureBox_pic->Name = L"pictureBox_pic";
 			this->pictureBox_pic->Size = System::Drawing::Size(702, 449);
 			this->pictureBox_pic->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox_pic->TabIndex = 2;
@@ -105,27 +104,27 @@ namespace FunFrom {
 			this->pictureBox_pic->Click += gcnew System::EventHandler(this, &MyForm::pictureBox_pic_Click);
 			this->pictureBox_pic->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::pictureBox1_MouseDown);
 			// 
-			// textBox2
+			// textBoxPicFile
 			// 
 			this->textBoxPicFile->Location = System::Drawing::Point(223, 62);
-			this->textBoxPicFile->Name = L"textBox2";
+			this->textBoxPicFile->Name = L"textBoxPicFile";
 			this->textBoxPicFile->Size = System::Drawing::Size(394, 25);
 			this->textBoxPicFile->TabIndex = 3;
 			// 
-			// button2
+			// selectPicButton
 			// 
 			this->selectPicButton->Location = System::Drawing::Point(655, 64);
-			this->selectPicButton->Name = L"button2";
+			this->selectPicButton->Name = L"selectPicButton";
 			this->selectPicButton->Size = System::Drawing::Size(75, 23);
 			this->selectPicButton->TabIndex = 4;
 			this->selectPicButton->Text = L"参照";
 			this->selectPicButton->UseVisualStyleBackColor = true;
 			this->selectPicButton->Click += gcnew System::EventHandler(this, &MyForm::selectPicButton_Click);
 			// 
-			// pictureBox2
+			// pictureBox_color
 			// 
-			this->pictureBox_color->Location = System::Drawing::Point(98, 50);
-			this->pictureBox_color->Name = L"pictureBox2";
+			this->pictureBox_color->Location = System::Drawing::Point(99, 50);
+			this->pictureBox_color->Name = L"pictureBox_color";
 			this->pictureBox_color->Size = System::Drawing::Size(119, 71);
 			this->pictureBox_color->TabIndex = 5;
 			this->pictureBox_color->TabStop = false;
@@ -134,7 +133,7 @@ namespace FunFrom {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(921, 647);
+			this->ClientSize = System::Drawing::Size(906, 647);
 			this->Controls->Add(this->pictureBox_color);
 			this->Controls->Add(this->selectPicButton);
 			this->Controls->Add(this->textBoxPicFile);
