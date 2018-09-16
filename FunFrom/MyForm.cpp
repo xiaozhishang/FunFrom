@@ -1,10 +1,11 @@
 ﻿#include "MyForm.h"
 using namespace FunFrom;
 [STAThread]
-
+#pragma comment(linker,"/subsystem:windows /ENTRY:mainCRTStartup")
 int main()
 {
 	Application::EnableVisualStyles();
+	Application::SetCompatibleTextRenderingDefault(false);
 	Application::Run(gcnew MyForm());
 	//textBox5.LostFocus += new EventHandler(txt_LostFocus);
 }

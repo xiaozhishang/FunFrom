@@ -140,12 +140,14 @@ namespace FunFrom {
 			this->Controls->Add(this->pictureBox_pic);
 			this->Controls->Add(this->funButton);
 			this->Controls->Add(this->textBox_RGB);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox_pic))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox_color))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
+
 		}
 #pragma endregion
 };
