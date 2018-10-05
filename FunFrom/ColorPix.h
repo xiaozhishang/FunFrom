@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include <iostream>
-namespace FunFrom {
 
+namespace FunFrom {
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;

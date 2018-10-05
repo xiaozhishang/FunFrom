@@ -49,6 +49,7 @@ Void ColorPix::pictureBox_pic_Click(System::Object^  sender, System::EventArgs^ 
 	Color pixelColor = myBitmap->GetPixel((int)xReally, (int)yReally);
 	pictureBox_color->BackColor = pixelColor;
 	textBox_RGB->Text = pixelColor.ToString();
+	Clipboard::SetDataObject(pixelColor.ToString(), true);
 	//MessageBox::Show(pixelColor.ToString());
 }
 
